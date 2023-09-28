@@ -69,6 +69,7 @@ public class ComputerStore {
                     } while (size <= createdcomp || compcount > size || compcount <= 0);
                     break;
                 case 2:
+                	//Check password first
                     if (!checkPassword()) {
                         break;
                     }
