@@ -29,7 +29,7 @@ public class ComputerStore {
                     "Please enter your choice: ");
             
             mainMenu = kb.nextInt();
-            kb.nextLine(); // Consume the newline character
+            kb.nextLine(); 
             
             switch (mainMenu) {
                 case 1:
@@ -46,7 +46,7 @@ public class ComputerStore {
                         } else if (compcount <= 0) {
                             System.out.println("Invalid input. Please enter a positive value.");
                         } else {
-                            kb.nextLine(); // Consume the newline character
+                            kb.nextLine();
                             for (int i = createdcomp; i < createdcomp + compcount; i++) {
                                 System.out.println("Enter computer " + (i + 1) + "'s brand: ");
                                 String brand = kb.nextLine();
@@ -56,7 +56,7 @@ public class ComputerStore {
                                 do {
                                     System.out.println("Enter computer " + (i + 1) + "'s price: ");
                                     price = kb.nextDouble();
-                                    kb.nextLine(); // Consume the newline character
+                                    kb.nextLine(); 
                                     if (price <= 0) {
                                         System.out.println("Invalid input. Price should be a positive value.");
                                     }
@@ -69,7 +69,7 @@ public class ComputerStore {
                     } while (size <= createdcomp || compcount > size || compcount <= 0);
                     break;
                 case 2:
-                	//Check password first
+                	
                     if (!checkPassword()) {
                         break;
                     }
@@ -77,7 +77,7 @@ public class ComputerStore {
                     do {
                         System.out.println("Enter the computer number you wish to modify: ");
                         compnum = kb.nextInt();
-                        kb.nextLine(); // Consume the newline character
+                        kb.nextLine(); 
                         if (compnum <= 0) {
                             System.out.println("Invalid input. Computer number should be a positive value.");
                             flag++;
@@ -86,7 +86,7 @@ public class ComputerStore {
                             System.out.println("1. Enter another computer number");
                             System.out.println("2. Quit this operation and go back to the main menu");
                             option = kb.nextInt();
-                            kb.nextLine(); // Consume the newline character
+                            kb.nextLine(); 
                             flag++;
                         } else {
                             compnum -= 1; 
@@ -104,7 +104,7 @@ public class ComputerStore {
                                         "5. Quit\n" +
                                         "Enter your choice: ");
                                 changeval = kb.nextInt();
-                                kb.nextLine(); // Consume the newline character
+                                kb.nextLine(); 
                                 switch (changeval) {
                                     case 1:
                                         System.out.println("Enter the new Brand name: ");
@@ -129,7 +129,7 @@ public class ComputerStore {
                                         do {
                                             System.out.println("Enter the new price: ");
                                             newPrice = kb.nextDouble();
-                                            kb.nextLine(); // Consume the newline character
+                                            kb.nextLine(); 
                                             if (newPrice <= 0) {
                                                 System.out.println("Invalid input. Price should be a positive value.");
                                             }
@@ -155,7 +155,7 @@ public class ComputerStore {
                 case 4:
                     System.out.println("Enter the price value to display the computers cheaper than the given price: ");
                     double pr = kb.nextDouble();
-                    kb.nextLine(); // Consume the newline character
+                    kb.nextLine(); 
                     if (findCheaperThan(inventory, pr) == 0)
                         System.out.println("There are no computers cheaper than " + pr);
                     break;
